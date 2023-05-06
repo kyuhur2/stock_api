@@ -4,7 +4,7 @@
 
 ### Create a financial data storage server
 
-1. Obtain financial data for two specific stocks (IBM and Apple Inc.) for the past two weeks up with [AlphaVantage](https://www.alphavantage.co/documentation/) 
+1. Obtain financial data for two specific stocks (IBM and Apple Inc.) for the past two weeks up with [AlphaVantage](https://www.alphavantage.co/documentation/)
 
 2. Process the raw data response from the API. The expected result following processing should resemble the following sample output:
 
@@ -31,7 +31,7 @@
     "volume": "42399013"
 },
 ...
-``` 
+```
 3. Add entries to a database table titled `financial_data` on a local server. Use the exact same column names as those derived from the data processing conducted in step 2 (`symbol`, `date`, `open_price`, `close_price`, `volume`).
 
 ### Create an API to retrieve financial data from storage server
