@@ -2,8 +2,6 @@
 
 ## Project Description
 
-**Project purpose is outlined in the [next section](#Purpose).**
-
 ### Section 1 - Create a financial data storage server
 
 1. Storing API keys safely **(THIS STEP IS NECESSARY FOR STEP 2)**
@@ -31,6 +29,11 @@
 - Logs are recorded in `./logs/logs.log`, `./logs` directory is created if it doesn't exist
 - Errors from API, data, etc. are handled in `AlphaVantageProvider.get_stock_data()`
 - All components adhere to SOLID principles -- while this project is simple and can be done in one file, maintainability and extensibility is important
+
+### Miscellaneous
+
+- Added CI
+- Added branch rules on main (have to submit PRs to merge changes, have to pass CI to merge, etc.)
 
 ## Purpose
 
