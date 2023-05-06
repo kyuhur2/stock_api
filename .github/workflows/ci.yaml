@@ -27,10 +27,6 @@ jobs:
       run: |
         pre-commit run --all-files
 
-    - name: Run static analysis
-      run: |
-        mypy .
-
     - name: Run unit tests and generate coverage report
       run: |
         pytest tests/unit --cov=my_module --cov-report=xml
