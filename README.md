@@ -1,6 +1,41 @@
 # Stock API Project
 
-## Goals
+## Project Description
+
+### Section 1 - Create a financial data storage server
+
+1. Storing API keys safely **(THIS STEP IS NECESSARY FOR STEP 2)**
+
+    1.1. Locally (assumes `python-dotenv` is downloaded)
+    - Create an `.env` file in the parent-most directory
+    - Add the API key in the file with `ALPHA_VANTAGE_API_KEY=<insert_api_key_here>`
+
+    1.2. Production
+    - Set the API key as an environment variable directly with `export ALPHA_VANTAGE_API_KEY=<insert_api_key_here>`
+    **OR**
+    - Add the `ALPHA_VANTAGE_API_KEY` variable on the deployment platform environment through the management system
+
+2. Running the project
+
+        cd ~/stock_api
+        pip install -r requirements.txt
+        virtualenv stock_api_env  # python -m venv stock_api_env if no global virtualenv
+        source stock_api_env/bin/activate  # env\Scripts\activate.bat for Windows
+        python get_raw_data.py
+
+3. Things to note
+- Database is initialized if no database exists (`SQLite3` by default)
+- Duplicate entries in the database is not allowed
+- Logs are recorded in `./logs/logs.log`, `./logs` directory is created if it doesn't exist
+- Errors from API, data, etc. are handled in `AlphaVantageProvider.get_stock_data()`
+- All components adhere to SOLID principles -- while this project is simple and can be done in one file, maintainability and extensibility is important
+
+### Miscellaneous
+
+- Added CI
+- Added branch rules on main (have to submit PRs to merge changes, have to pass CI to merge, etc.)
+
+## Purpose
 
 ### Create a financial data storage server
 

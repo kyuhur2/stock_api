@@ -1,0 +1,7 @@
+.vscode
+.env
+__pycache__/
+
+logs/
+stock_api_env/
+financial_data.db
