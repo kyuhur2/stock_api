@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  stock_api:
+    build: ./
+    container_name: stock_api
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./financial/
+        target: /app/financial
+    environment:
+      PYTHONUNBUFFERED: 1

@@ -1,9 +1,9 @@
 import asyncio
 import os
-from section1_lib.config import load_configuration
-from section1_lib.database import SQLiteDatabaseOperations, initialize_database, store_stock_data
-from section1_lib.data_provider import AlphaVantageProvider
-from section1_lib.logger import create_logger
+from section1.config import load_configuration
+from section1.database import SQLiteDatabaseOperations, initialize_database, store_stock_data
+from section1.data_provider import AlphaVantageProvider
+from section1.logger import create_logger
 
 
 if __name__ == "__main__":
