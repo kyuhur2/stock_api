@@ -2,7 +2,7 @@ from typing import List
 from pydantic import BaseModel
 
 
-class PaginationInfo(BaseModel):
+class PaginationData(BaseModel):
     count: int
     page: int
     limit: int
@@ -28,7 +28,7 @@ class Statistics(BaseModel):
 
 class FinancialDataResponse(BaseModel):
     data: List[FinancialData]
-    pagination: PaginationInfo
+    pagination: PaginationData
     info: dict
 
 
