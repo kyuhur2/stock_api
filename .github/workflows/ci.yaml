@@ -28,6 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install mypy flake8 black pytest pytest-cov pre-commit
         pip install -r requirements.txt
+        pip install -e .
 
     - name: Lint with pre-commit
       run: |
