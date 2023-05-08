@@ -4,6 +4,12 @@ Project purpose outlined [here](/docs/README.md).
 
 ## Project Description
 
+### Required software
+
+- Linux (should work on a macOS and windows with minor tweaks--but not tested)
+- Python 3.8
+- virtualenv (install with `pip install virtualenv` or `pip3 install virtualenv`)
+
 ### Section 1 - Create a financial data storage server
 
 1. Storing API keys safely **(THIS STEP IS NECESSARY FOR STEP 2)**
@@ -25,9 +31,9 @@ Project purpose outlined [here](/docs/README.md).
 2. Running the project **(THIS STEP IS NECESSARY FOR NEXT SECTION)**
 
         cd ~/stock_api
-        pip install -r requirements.txt
         virtualenv stock_api_env  # python -m venv stock_api_env if no global virtualenv
         source stock_api_env/bin/activate  # env\Scripts\activate.bat for Windows
+        pip install -r requirements.txt
         python get_raw_data.py
 
 3. Things to note
