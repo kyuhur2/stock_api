@@ -3,7 +3,7 @@ import json
 import logging
 from abc import ABC, abstractmethod
 from typing import List, Dict
-from section1_lib.logger import CustomLogger  # noqa: F401
+from section1.logger import CustomLogger  # noqa: F401
 
 
 class HistoricalDataProvider(ABC):
