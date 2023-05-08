@@ -11,6 +11,11 @@ Project purpose outlined [here](/docs/README.md).
     1.1. Locally (assumes `python-dotenv` is downloaded)
     - Create an `.env` file in the parent-most directory
     - Add the API key in the file with `ALPHA_VANTAGE_API_KEY=<insert_api_key_here>`
+    - `.env` variables:
+        - **(Required)** `ALPHA_VANTAGE_API_KEY`
+        - (Optional) `DATABASE_URL` - default is `sqlite:///./financial_data.db`
+        - (Optional) `NUMBER_OF_DAYS` - default is `14`
+        - (Optional) `LOG_PATH` - default is `./logs/logs.log`
 
     1.2. Production
     - Set the API key as an environment variable directly with `export ALPHA_VANTAGE_API_KEY=<insert_api_key_here>`
