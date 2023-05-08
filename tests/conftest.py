@@ -35,7 +35,7 @@ def check_db_exists():
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+            project_root = os.path.join(os.path.dirname(__file__), "..")
             if os.path.exists(os.path.join(project_root, DATABASE_NAME)):
                 return func(*args, **kwargs)
             else:

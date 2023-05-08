@@ -8,7 +8,7 @@ from financial.models import PaginationData, FinancialData, Statistics
 from fastapi import HTTPException, Request
 
 
-BASE_URL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_URL = os.path.join(os.path.dirname(__file__), "..")
 DATABASE_URL = os.path.join(BASE_URL, "financial_data.db")
 RATE_LIMIT_REQUESTS = 120
 RATE_LIMIT_TIME = 60
